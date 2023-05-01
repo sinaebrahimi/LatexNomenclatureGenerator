@@ -1,6 +1,7 @@
 import re
 from pathlib import Path
 from typing import List, Dict
+import pyperclip
 
 def read_file(file: Path) -> str:
     with open(file, 'r', encoding='utf-8') as f:
@@ -51,3 +52,4 @@ if __name__ == '__main__':
     main_tex_file = r"C:\TV\tek\main.tex"
     table = generate_acronyms_table(main_tex_file)
     print(table)
+    pyperclip.copy(table) #copies the output to the clipboard
