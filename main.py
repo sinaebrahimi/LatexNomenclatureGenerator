@@ -49,7 +49,8 @@ def generate_acronyms_table(main_tex_file: str) -> str:
 
 
 if __name__ == '__main__':
-    main_tex_file = r"C:\TV\tek\main.tex"
+    main_tex_file = input("Enter file path:\n(Please enter your main .tex file \n(It can include inputs as sections in that folder or containing folders)\n Enter file path:\n")
+    #main_tex_file = r"C:\TV\tek\main.tex"
     table = generate_acronyms_table(main_tex_file)
     print(table)
     pyperclip.copy(table) #copies the output to the clipboard
